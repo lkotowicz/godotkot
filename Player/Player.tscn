@@ -1,0 +1,148 @@
+[gd_scene load_steps=26 format=3 uid="uid://cqwlqb3cs4v7y"]
+
+[ext_resource type="Script" path="res://Player/muwment.gd" id="1_bxtcb"]
+[ext_resource type="Texture2D" uid="uid://br4f1f7q0pa75" path="res://Player/Players/Fiery Imp/jump/Sprites/jump-1.png" id="2_88ifp"]
+[ext_resource type="Texture2D" uid="uid://bouuejk8ou7f" path="res://Player/Players/Fiery Imp/hurt/Sprites/hurt-1.png" id="3_g10js"]
+[ext_resource type="Texture2D" uid="uid://de8s8ihmd6dpw" path="res://Player/Players/Fiery Imp/hurt/Sprites/hurt-2.png" id="4_cjo24"]
+[ext_resource type="Texture2D" uid="uid://dytv4m3auq084" path="res://Player/Players/Fiery Imp/hurt/hurt-sheet.png" id="5_6k6gl"]
+[ext_resource type="Texture2D" uid="uid://bu6ytd0iorgev" path="res://Player/Players/Fiery Imp/idle/Sprites/idle-1.png" id="6_s1rpy"]
+[ext_resource type="Texture2D" uid="uid://c1evd7qvvq4ya" path="res://Player/Players/Fiery Imp/idle/Sprites/idle-2.png" id="7_cdqlk"]
+[ext_resource type="Texture2D" uid="uid://cmhp3tha5vwki" path="res://Player/Players/Fiery Imp/idle/Sprites/idle-3.png" id="8_bluy8"]
+[ext_resource type="Texture2D" uid="uid://b0x07ni4n2vok" path="res://Player/Players/Fiery Imp/idle/Sprites/idle-4.png" id="9_qn5qf"]
+[ext_resource type="Texture2D" uid="uid://b36ndv1b8a2" path="res://Player/Players/Fiery Imp/jump/Sprites/jump-2.png" id="10_5qguf"]
+[ext_resource type="Texture2D" uid="uid://c4rcowbr0we0u" path="res://Player/Players/Fiery Imp/jump/Sprites/jump-3.png" id="11_v0uwk"]
+[ext_resource type="Texture2D" uid="uid://ei4tma5sk1tq" path="res://Player/Players/Fiery Imp/jump/Sprites/jump-4.png" id="12_a1euc"]
+[ext_resource type="Texture2D" uid="uid://mfmyogp6bnhb" path="res://Player/Players/Fiery Imp/jump/Sprites/jump-5.png" id="13_n0fc3"]
+[ext_resource type="Texture2D" uid="uid://c543cii1m61oq" path="res://Player/Players/Fiery Imp/run/Sprites/run-1.png" id="14_ildhy"]
+[ext_resource type="Texture2D" uid="uid://c0xuu8d6k8jvo" path="res://Player/Players/Fiery Imp/run/Sprites/run-2.png" id="15_asals"]
+[ext_resource type="Texture2D" uid="uid://dicrx7l5c530e" path="res://Player/Players/Fiery Imp/run/Sprites/run-3.png" id="16_y5x4i"]
+[ext_resource type="Texture2D" uid="uid://k7wkj6lwonva" path="res://Player/Players/Fiery Imp/run/Sprites/run-4.png" id="17_uwnhd"]
+[ext_resource type="Texture2D" uid="uid://blwpw61h1u5fh" path="res://Player/Players/Fiery Imp/run/Sprites/run-5.png" id="18_7kwys"]
+[ext_resource type="Texture2D" uid="uid://cly3r1aljl78i" path="res://Player/Players/Fiery Imp/run/Sprites/run-6.png" id="19_iw1dt"]
+[ext_resource type="Texture2D" uid="uid://djx4eau44onv2" path="res://Player/Players/Fiery Imp/run/Sprites/run-7.png" id="20_6fjj3"]
+[ext_resource type="Texture2D" uid="uid://di43yawj2u4h" path="res://Player/Players/Fiery Imp/run/Sprites/run-8.png" id="21_fqs8l"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_grohf"]
+radius = 22.0
+height = 76.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b0813"]
+atlas = ExtResource("5_6k6gl")
+region = Rect2(0, 0, 51, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6g6pm"]
+atlas = ExtResource("5_6k6gl")
+region = Rect2(51, 0, 51, 45)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f61l3"]
+resource_local_to_scene = true
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_88ifp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_g10js")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_cjo24")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b0813")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6g6pm")
+}],
+"loop": true,
+"name": &"hurt",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_s1rpy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_cdqlk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_bluy8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_qn5qf")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_88ifp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_5qguf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_v0uwk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_a1euc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_n0fc3")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_ildhy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_asals")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_y5x4i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_uwnhd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_7kwys")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_iw1dt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_6fjj3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_fqs8l")
+}],
+"loop": true,
+"name": &"run",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody2D"]
+position = Vector2(305, 253)
+disable_mode = 2
+slide_on_ceiling = false
+script = ExtResource("1_bxtcb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-102, -88)
+shape = SubResource("CapsuleShape2D_grohf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-101.875, -99)
+scale = Vector2(1.7598, 1.86667)
+sprite_frames = SubResource("SpriteFrames_f61l3")
+animation = &"idle"
+frame_progress = 0.97361

@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://cqwlqb3cs4v7y"]
+[gd_scene load_steps=31 format=3 uid="uid://cqwlqb3cs4v7y"]
 
 [ext_resource type="Script" path="res://Player/muwment.gd" id="1_bxtcb"]
 [ext_resource type="Texture2D" uid="uid://br4f1f7q0pa75" path="res://Player/Players/Fiery Imp/jump/Sprites/jump-1.png" id="2_88ifp"]
@@ -24,7 +24,7 @@
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_grohf"]
 radius = 22.0
-height = 76.0
+height = 60.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b0813"]
 atlas = ExtResource("5_6k6gl")
@@ -129,8 +129,78 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="Animation" id="Animation_17he0"]
+resource_name = "idle"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.466667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [&"idle", &"idle"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0666667, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_dk5hx"]
+resource_name = "run"
+
+[sub_resource type="Animation" id="Animation_lbtjb"]
+resource_name = "jump"
+
+[sub_resource type="Animation" id="Animation_f1tu2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"idle"]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1lpay"]
+_data = {
+"RESET": SubResource("Animation_f1tu2"),
+"idle": SubResource("Animation_17he0"),
+"jump": SubResource("Animation_lbtjb"),
+"run": SubResource("Animation_dk5hx")
+}
+
 [node name="Player" type="CharacterBody2D"]
-position = Vector2(305, 253)
+position = Vector2(272, 232)
 disable_mode = 2
 slide_on_ceiling = false
 script = ExtResource("1_bxtcb")
@@ -145,4 +215,15 @@ position = Vector2(-101.875, -99)
 scale = Vector2(1.7598, 1.86667)
 sprite_frames = SubResource("SpriteFrames_f61l3")
 animation = &"idle"
-frame_progress = 0.97361
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_1lpay")
+}
+autoplay = "idle"
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.6, 1)

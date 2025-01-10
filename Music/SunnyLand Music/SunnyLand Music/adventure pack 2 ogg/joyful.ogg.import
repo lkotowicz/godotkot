@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bgh1hxeetvgua"
+path="res://.godot/imported/joyful.ogg-0c1350f1f7e5c031cec9564f809b866c.oggvorbisstr"
+
+[deps]
+
+source_file="res://Music/SunnyLand Music/SunnyLand Music/adventure pack 2 ogg/joyful.ogg"
+dest_files=["res://.godot/imported/joyful.ogg-0c1350f1f7e5c031cec9564f809b866c.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

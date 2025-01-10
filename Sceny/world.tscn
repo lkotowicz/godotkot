@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://cifuvgmbsa5l4"]
+
+[ext_resource type="Script" path="res://Scripts/BackToMain.gd" id="1_4pg7w"]
+
+[node name="world" type="Node2D"]
+
+[node name="Back_To_Main" type="Button" parent="."]
+offset_left = 136.0
+offset_top = 129.0
+offset_right = 397.0
+offset_bottom = 195.0
+tooltip_text = "Pacia ma fajną buzie"
+text = "Back_To_Main"
+script = ExtResource("1_4pg7w")
+
+[connection signal="pressed" from="Back_To_Main" to="Back_To_Main" method="_on_pressed"]

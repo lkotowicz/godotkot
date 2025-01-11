@@ -1,0 +1,57 @@
+[gd_scene load_steps=8 format=3 uid="uid://77qxtpcis6yf"]
+
+[ext_resource type="Script" path="res://Scripts/parallax_background.gd" id="1_efqun"]
+[ext_resource type="Texture2D" uid="uid://qosh23cssbdy" path="res://Assety/sunny-land-phaser-project/sunny-land/assets/environment/back.png" id="2_v5jho"]
+[ext_resource type="PackedScene" uid="uid://cqwlqb3cs4v7y" path="res://Sceny/Player.tscn" id="3_nl5n2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mto7i"]
+size = Vector2(2295, 21)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ygqj2"]
+size = Vector2(2295, 21)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_25t51"]
+size = Vector2(12, 522)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mi86v"]
+size = Vector2(10.5, 522)
+
+[node name="world2" type="Node2D"]
+
+[node name="background" type="Node2D" parent="."]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="background"]
+script = ExtResource("1_efqun")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="background/ParallaxBackground"]
+motion_mirroring = Vector2(1152, 0)
+metadata/_edit_lock_ = true
+
+[node name="Back" type="Sprite2D" parent="background/ParallaxBackground/ParallaxLayer"]
+position = Vector2(576, 264)
+scale = Vector2(3, 2.2)
+texture = ExtResource("2_v5jho")
+
+[node name="Player" parent="." instance=ExtResource("3_nl5n2")]
+position = Vector2(529, 277)
+metadata/_edit_lock_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Floor" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1148.5, 513)
+shape = SubResource("RectangleShape2D_mto7i")
+metadata/_edit_lock_ = true
+
+[node name="ceil" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1149, 12.5)
+shape = SubResource("RectangleShape2D_ygqj2")
+metadata/_edit_lock_ = true
+
+[node name="lewaSciana" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(6, 263)
+shape = SubResource("RectangleShape2D_25t51")
+
+[node name="lewaSciana2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(2298.25, 262)
+shape = SubResource("RectangleShape2D_mi86v")

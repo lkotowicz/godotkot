@@ -1,0 +1,131 @@
+[gd_scene load_steps=23 format=3 uid="uid://dbuujol4sqcub"]
+
+[ext_resource type="Texture2D" uid="uid://vrrxgpowb7dr" path="res://Assety/Sunny Land Collection Files/Sunny Land Collection Files/Assets/Props Items and VFX/Sunnyland FX/Sprites/enemy-death/enemy-death-1.png" id="1_yiasx"]
+[ext_resource type="Texture2D" uid="uid://tyc3q4y7kk1c" path="res://Assety/Sunny Land Collection Files/Sunny Land Collection Files/Assets/Props Items and VFX/Sunnyland FX/Sprites/enemy-death/enemy-death-2.png" id="2_qksug"]
+[ext_resource type="Texture2D" uid="uid://c13k8l6t5gqhy" path="res://Assety/Sunny Land Collection Files/Sunny Land Collection Files/Assets/Props Items and VFX/Sunnyland FX/Sprites/enemy-death/enemy-death-3.png" id="3_erqaq"]
+[ext_resource type="Texture2D" uid="uid://coyu8ctedllw1" path="res://Assety/Sunny Land Collection Files/Sunny Land Collection Files/Assets/Props Items and VFX/Sunnyland FX/Sprites/enemy-death/enemy-death-4.png" id="4_qhmal"]
+[ext_resource type="Texture2D" uid="uid://3tk14np8cyfh" path="res://Assety/Sunny Land Collection Files/Sunny Land Collection Files/Assets/Props Items and VFX/Sunnyland FX/Sprites/enemy-death/enemy-death-5.png" id="5_pj2io"]
+[ext_resource type="Texture2D" uid="uid://dr7csayuntehk" path="res://Assety/Sunny Land Collection Files/Sunny Land Collection Files/Assets/Props Items and VFX/Sunnyland FX/Sprites/enemy-death/enemy-death-6.png" id="6_kd5el"]
+[ext_resource type="Texture2D" uid="uid://cqpj80xmghe67" path="res://Assety/Sunny Land Collection Files/Sunny Land Collection Files/Assets/Environments/Forest/Forest Enemies Add On Pack/Slug/hurt/sprites/hurt1.png" id="7_g7twf"]
+[ext_resource type="Texture2D" uid="uid://tu7b604xy4xq" path="res://Assety/Sunny Land Collection Files/Sunny Land Collection Files/Assets/Environments/Forest/Forest Enemies Add On Pack/Slug/hurt/sprites/hurt2.png" id="8_p4yuo"]
+[ext_resource type="Texture2D" uid="uid://463dkxr2d6y1" path="res://Assety/Sunny Land Collection Files/Sunny Land Collection Files/Assets/Environments/Forest/Forest Enemies Add On Pack/Slug/hurt/sprites/hurt3.png" id="9_cbgf6"]
+[ext_resource type="Texture2D" uid="uid://c464mlkcyochk" path="res://Assety/Sunny Land Collection Files/Sunny Land Collection Files/Assets/Environments/Forest/Forest Enemies Add On Pack/Slug/hurt/sprites/hurt4.png" id="10_p3bau"]
+[ext_resource type="Texture2D" uid="uid://cqssqskgox1j2" path="res://Assety/Sunny Land Collection Files/Sunny Land Collection Files/Assets/Environments/Forest/Forest Enemies Add On Pack/Slug/hurt/sprites/hurt5.png" id="11_qqrow"]
+[ext_resource type="Texture2D" uid="uid://gqy8opfwu4yl" path="res://Assety/Sunny Land Collection Files/Sunny Land Collection Files/Assets/Environments/Forest/Forest Enemies Add On Pack/Slug/hurt/sprites/hurt6.png" id="12_40ln8"]
+[ext_resource type="Texture2D" uid="uid://qkdqqwr0osbt" path="res://Assety/Sunny Land Collection Files/Sunny Land Collection Files/Assets/Environments/Forest/Forest Enemies Add On Pack/Slug/hurt/sprites/hurt7.png" id="13_270sp"]
+[ext_resource type="Texture2D" uid="uid://c3cc65u1ydnym" path="res://Assety/Sunny Land Collection Files/Sunny Land Collection Files/Assets/Environments/Forest/Forest Enemies Add On Pack/Slug/Poo Goo/sprites/poo-goo1.png" id="14_r1373"]
+[ext_resource type="Texture2D" uid="uid://c1ujyjycbeqtk" path="res://Assety/Sunny Land Collection Files/Sunny Land Collection Files/Assets/Environments/Forest/Forest Enemies Add On Pack/Slug/Poo Goo/sprites/poo-goo2.png" id="15_geivk"]
+[ext_resource type="Texture2D" uid="uid://fc343ddldfc6" path="res://Assety/Sunny Land Collection Files/Sunny Land Collection Files/Assets/Environments/Forest/Forest Enemies Add On Pack/Slug/Poo Goo/sprites/poo-goo3.png" id="16_hwgah"]
+[ext_resource type="Texture2D" uid="uid://pxeihesd2bdi" path="res://Assety/Sunny Land Collection Files/Sunny Land Collection Files/Assets/Environments/Forest/Forest Enemies Add On Pack/Slug/Poo Goo/sprites/poo-goo4.png" id="17_3wvbx"]
+[ext_resource type="Texture2D" uid="uid://kkd563qpn8d4" path="res://Assety/Sunny Land Collection Files/Sunny Land Collection Files/Assets/Environments/Forest/Forest Enemies Add On Pack/Slug/Poo Goo/sprites/poo-goo5.png" id="18_we7f5"]
+[ext_resource type="Texture2D" uid="uid://bxxm13eddu1s" path="res://Assety/Sunny Land Collection Files/Sunny Land Collection Files/Assets/Environments/Forest/Forest Enemies Add On Pack/Slug/Poo Goo/sprites/poo-goo6.png" id="19_2h3xn"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8k75t"]
+radius = 8.0
+height = 16.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o4lfl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_yiasx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_qksug")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_erqaq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_qhmal")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_pj2io")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_kd5el")
+}],
+"loop": true,
+"name": &"dead",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_g7twf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_p4yuo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_cbgf6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_p3bau")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_qqrow")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_40ln8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_270sp")
+}],
+"loop": true,
+"name": &"hurt",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_r1373")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_geivk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_hwgah")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_3wvbx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_we7f5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_2h3xn")
+}],
+"loop": true,
+"name": &"move",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jql7s"]
+radius = 86.0015
+
+[node name="Enemy" type="CharacterBody2D"]
+position = Vector2(20, 24)
+scale = Vector2(2, 2)
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+shape = SubResource("CapsuleShape2D_8k75t")
+metadata/_edit_lock_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-0.5, -3.5)
+sprite_frames = SubResource("SpriteFrames_o4lfl")
+animation = &"move"
+autoplay = "move"
+
+[node name="player_Detection" type="Area2D" parent="."]
+position = Vector2(-1, -1.5)
+scale = Vector2(0.5, 0.5)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="player_Detection"]
+position = Vector2(2, 3)
+scale = Vector2(2, 2)
+shape = SubResource("CircleShape2D_jql7s")
+
+[connection signal="body_entered" from="player_Detection" to="player_Detection" method="_on_player_detection_body_entered"]
+[connection signal="body_exited" from="player_Detection" to="player_Detection" method="_on_player_detection_body_exited"]

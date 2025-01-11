@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://qsgnjhl6soat"]
+
+[ext_resource type="AudioStream" uid="uid://baks8auw6leuf" path="res://Music/SunnyLand Music/SunnyLand Music/adventure pack 2 ogg/world wanderer.ogg" id="1_34wrj"]
+
+[node name="BGmusic" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_34wrj")
+autoplay = true
+max_distance = 3000.0

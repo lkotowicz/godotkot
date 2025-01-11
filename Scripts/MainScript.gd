@@ -1,8 +1,10 @@
 extends Node2D
 
-
-func _on_play_pressed() -> void:
+#Button Play
+func _on_Play_pressed() -> void:
 	get_tree().change_scene_to_file("res://Sceny/world.tscn")
-	
-func _on_quit_pressed() -> void:
+
+func _on_Play2_pressed() -> void:
+	get_tree().change_scene_to_file("res://Sceny/world_2.tscn")
+func _on_Quit_pressed() -> void:
 	get_tree().quit()

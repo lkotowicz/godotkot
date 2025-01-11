@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://cifuvgmbsa5l4"]
+[gd_scene load_steps=8 format=3 uid="uid://cifuvgmbsa5l4"]
 
 [ext_resource type="Script" path="res://Scripts/BackToMain.gd" id="1_4pg7w"]
 [ext_resource type="PackedScene" uid="uid://cqwlqb3cs4v7y" path="res://Player/Player.tscn" id="2_wj4wy"]
+[ext_resource type="Script" path="res://Player/muwment.gd" id="3_gfprx"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_mrpfk"]
 
@@ -42,9 +43,6 @@ offset_top = 547.0
 offset_right = 1046.0
 offset_bottom = 609.0
 
-[node name="Player" parent="." instance=ExtResource("2_wj4wy")]
-position = Vector2(653, 463)
-
 [node name="Back_To_Main" type="Button" parent="."]
 visible = false
 offset_left = 136.0
@@ -54,5 +52,9 @@ offset_bottom = 195.0
 tooltip_text = "Pacia ma fajną buzie"
 text = "Back_To_Main"
 script = ExtResource("1_4pg7w")
+
+[node name="Player" parent="." instance=ExtResource("2_wj4wy")]
+position = Vector2(689, 591)
+script = ExtResource("3_gfprx")
 
 [connection signal="pressed" from="Back_To_Main" to="Back_To_Main" method="_on_pressed"]
